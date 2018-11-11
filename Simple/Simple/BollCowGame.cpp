@@ -24,9 +24,9 @@ bool BollCowGame::IsGameWon() const
 
 bool BollCowGame::isAllLower(std::string strGuess) {
 	bool bIsAllLOwer = true;
-	for (size_t i = 0; i < strGuess.length(); i++)
+	for (char letter :	strGuess)
 	{
-		if (!((strGuess[i] >= 'a') && (strGuess[i] <= 'z'))) {
+		if (!((letter >= 'a') && (letter <= 'z'))) {
 			bIsAllLOwer = false;
 			break;
 		}
@@ -55,9 +55,9 @@ GuessStatus BollCowGame::CheckGuessValid(std::string strGuess) const
 
 bool BollCowGame::isUnique(char c, std::string strGuess) {
 	int nCount = 0;
-	for (size_t i = 0; i < strGuess.length(); i++)
+	for (char letter : strGuess)
 	{
-		if (c == strGuess[i]) {
+		if (c == letter) {
 			nCount++;
 			if (nCount > 1) {
 				return false;
@@ -70,9 +70,9 @@ bool BollCowGame::isUnique(char c, std::string strGuess) {
 
 bool BollCowGame::isAllUnique(std::string strGuess) {
 
-	for (size_t i = 0; i < strGuess.length(); i++)
+	for (char letter : strGuess)
 	{
-		if (!isUnique(strGuess[i],strGuess)) {
+		if (!isUnique(letter,strGuess)) {
 			return false;
 		}
 	}
