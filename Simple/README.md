@@ -15,3 +15,8 @@ Bulls (value and position are correct) and Cows(value is correct but position is
 <li>BollCowGame is a class which represent one "bulls and cows" game</li>
 </ul>
 
+
+<h2>Todo</h2>
+<ul>
+<li>create the hidden string random</li>
+</ul>

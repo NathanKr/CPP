@@ -22,7 +22,7 @@ public:
 	bool IsGameWon() const;
 	GuessStatus CheckGuessValid(std::string strGuess) const;
 
-	BullCowCount SubmitGuess(std::string strGuess) ;
+	BullCowCount SubmitValidGuess(std::string strGuess) ;
 	BollCowGame(int nMaxTries , int nWorldLength);
 
 private:

@@ -83,7 +83,7 @@ bool BollCowGame::isAllUnique(std::string strGuess) {
 /*
 	assume input is valid so we also increment m_nCurrentTry
 */
-BullCowCount BollCowGame::SubmitGuess(std::string strGuess) 
+BullCowCount BollCowGame::SubmitValidGuess(std::string strGuess) 
 {
 	BullCowCount count;
 	m_nCurrentTry++;

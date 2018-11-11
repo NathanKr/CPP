@@ -66,7 +66,7 @@ void PlayGame() {
 	bcGame.Reset();
 	BullCowCount count;
 
-	for (size_t i = 0; i < bcGame.GetMaxTries() ; i++)
+	while ((bcGame.GetCurrentTry() < bcGame.GetMaxTries()) && !bcGame.IsGameWon())
 	{
 		do {
 			strGuess = GetGuess();
@@ -75,12 +75,7 @@ void PlayGame() {
 		} while (status != GuessStatus::Ok);
 
 
-		count = bcGame.SubmitGuess(strGuess);
-
-		if (bcGame.IsGameWon()) {
-			break;
- 		}
-
+		count = bcGame.SubmitValidGuess(strGuess);
 
 		cout << "Try : " << bcGame.GetCurrentTry() << endl;
 		cout << "Bulls : " << count.bulls << endl;
