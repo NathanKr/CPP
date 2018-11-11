@@ -16,7 +16,14 @@ BollCowGame bcGame(MAX_GUESS_NUMBER , WORD_LENGTH);
 
 
 void PrintIntro() {
-	cout << "Welcome to Bulls and Cows , a fun word game" << endl;
+	cout << "                     (__)      (__)" << endl;
+	cout << "                     (oo)      (oo)" << endl;
+	cout << "               /------\\/        \\/ --------\\" << endl;
+	cout << "              / |     ||        ||_______|  \\" << endl;
+	cout << "             *  ||W---||        ||      ||   *" << endl;
+	cout << "                ^^    ^^        ^^      ^^" << endl;
+
+	cout << "Welcome to Bulls and Cows , a fun word game" << endl << endl;
 	cout << "can you guess the " << WORD_LENGTH << " letters word i think about ?" << endl;
 }
 

@@ -16,6 +16,7 @@ struct BullCowCount {
 class BollCowGame
 {
 public:
+	BollCowGame(int nMaxTries, int nWorldLength);
 	void Reset();
 	size_t GetMaxTries() const;
 	size_t GetCurrentTry() const;
@@ -23,7 +24,6 @@ public:
 	GuessStatus CheckGuessValid(std::string strGuess) const;
 
 	BullCowCount SubmitValidGuess(std::string strGuess) ;
-	BollCowGame(int nMaxTries , int nWorldLength);
 
 private:
 	int m_nCurrentTry, m_nMaxTries;
