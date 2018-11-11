@@ -77,7 +77,7 @@ void PlayGame() {
 
 		count = bcGame.SubmitValidGuess(strGuess);
 
-		cout << "Try : " << bcGame.GetCurrentTry() << endl;
+		cout << "Try : " << bcGame.GetCurrentTry() << " of " << bcGame.GetMaxTries() << endl;
 		cout << "Bulls : " << count.bulls << endl;
 		cout << "Cows : " << count.cows << endl << endl;
 	}
