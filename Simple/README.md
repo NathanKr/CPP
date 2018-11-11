@@ -20,4 +20,5 @@ Bulls (value and position are correct) and Cows(value is correct but position is
 <ul>
 <li>create the hidden string random</li>
 <li>use map in isAllUnique which reduce its complexity from O(n^2) to O(n)</li>
+<li>show bulls and cows in nice font</li>
 </ul>
