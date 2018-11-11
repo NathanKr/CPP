@@ -30,3 +30,13 @@
 *.exe
 *.out
 *.app
+
+# add by Nathan
+browse.vc.opendb
+Debug/
+Release/
+v15/
+.vs/
+*.vcxproj
+*.filters
+*.user
