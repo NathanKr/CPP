@@ -82,7 +82,7 @@ void PlayGame() {
 		cout << "Cows : " << count.cows << endl << endl;
 	}
 
-	cout << (bcGame.IsGameWon() ? "Game won" : "Game lost") << endl << endl;
+	cout << (bcGame.IsGameWon() ? "YOU WIN" : "YOU LOSE") << endl << endl;
 }
 
 
