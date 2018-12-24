@@ -13,10 +13,10 @@ struct BullCowCount {
 	int cows=0;
 };
 
-class BollCowGame
+class BullCowGame
 {
 public:
-	BollCowGame(int nMaxTries, int nWorldLength);
+	BullCowGame(int nMaxTries, int nWorldLength);
 	void Reset();
 	size_t GetMaxTries() const;
 	size_t GetCurrentTry() const;

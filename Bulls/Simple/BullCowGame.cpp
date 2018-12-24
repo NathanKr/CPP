@@ -1,28 +1,28 @@
-#include "BollCowGame.h"
+#include "BullCowGame.h"
 #include <string>
 
 
-void BollCowGame::Reset()
+void BullCowGame::Reset()
 {
 	clear();
 }
 
-size_t BollCowGame::GetMaxTries() const
+size_t BullCowGame::GetMaxTries() const
 {
 	return m_nMaxTries;
 }
 
-size_t BollCowGame::GetCurrentTry() const
+size_t BullCowGame::GetCurrentTry() const
 {
 	return m_nCurrentTry;
 }
 
-bool BollCowGame::IsGameWon() const
+bool BullCowGame::IsGameWon() const
 {
 	return m_bGameWon;
 }
 
-bool BollCowGame::isAllLower(std::string strGuess) {
+bool BullCowGame::isAllLower(std::string strGuess) {
 	bool bIsAllLOwer = true;
 	for (char letter :	strGuess)
 	{
@@ -34,7 +34,7 @@ bool BollCowGame::isAllLower(std::string strGuess) {
 	return bIsAllLOwer;
 }
 
-GuessStatus BollCowGame::CheckGuessValid(std::string strGuess) const
+GuessStatus BullCowGame::CheckGuessValid(std::string strGuess) const
 {
 	GuessStatus status = GuessStatus::Ok;
 
@@ -53,7 +53,7 @@ GuessStatus BollCowGame::CheckGuessValid(std::string strGuess) const
 	return status;
 }
 
-bool BollCowGame::isUnique(char c, std::string strGuess) {
+bool BullCowGame::isUnique(char c, std::string strGuess) {
 	int nCount = 0;
 	for (char letter : strGuess)
 	{
@@ -68,7 +68,7 @@ bool BollCowGame::isUnique(char c, std::string strGuess) {
 	return true;
 }
 
-bool BollCowGame::isAllUnique(std::string strGuess) {
+bool BullCowGame::isAllUnique(std::string strGuess) {
 
 	for (char letter : strGuess)
 	{
@@ -83,7 +83,7 @@ bool BollCowGame::isAllUnique(std::string strGuess) {
 /*
 	assume input is valid so we also increment m_nCurrentTry
 */
-BullCowCount BollCowGame::SubmitValidGuess(std::string strGuess) 
+BullCowCount BullCowGame::SubmitValidGuess(std::string strGuess) 
 {
 	BullCowCount count;
 	m_nCurrentTry++;
@@ -108,13 +108,13 @@ BullCowCount BollCowGame::SubmitValidGuess(std::string strGuess)
 
 
 
-BollCowGame::BollCowGame(int nMaxTries ,  int nWorldLength) : m_strHiddenWord(nWorldLength,' ')
+BullCowGame::BullCowGame(int nMaxTries ,  int nWorldLength) : m_strHiddenWord(nWorldLength,' ')
 {
 	m_nMaxTries = nMaxTries;
 	clear();
 }
 
-void BollCowGame::clear()
+void BullCowGame::clear()
 {
 	// TODO make values random 
 	for (size_t i = 0; i < m_strHiddenWord.length(); i++)

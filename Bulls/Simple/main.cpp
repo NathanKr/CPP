@@ -1,18 +1,18 @@
 /*
 	
-	****  This file interact with the user and access BollCowGame which handles the game logic  **** 
+	****  This file interact with the user and access BullCowGame which handles the game logic  **** 
 */
 
 #include <iostream>
 #include <string>
 #include "main.h"
-#include "BollCowGame.h"
+#include "BullCowGame.h"
 
 using namespace std;
 constexpr int MAX_GUESS_NUMBER = 2;
 constexpr int WORD_LENGTH = 5;
 
-BollCowGame bcGame(MAX_GUESS_NUMBER , WORD_LENGTH);
+BullCowGame bcGame(MAX_GUESS_NUMBER , WORD_LENGTH);
 
 
 void PrintIntro() {
