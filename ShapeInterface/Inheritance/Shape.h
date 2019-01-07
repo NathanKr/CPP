@@ -1,11 +1,12 @@
 #pragma once
-class Shape
+#include "IShape.h"
+
+class Shape : public IShape
 {
 public:
 	Shape();
 	~Shape();
 
-	virtual float GetArea() const = 0 ;
 
 	void SetX(int x);
 	void SetY(int y);
