@@ -33,5 +33,6 @@ private:
 	static bool isAllLower(std::string strGuess);
 	static bool isAllUnique(std::string strGuess);
 	static bool isUnique(char c , std::string strGuess);
+	static bool doesExist(char c, std::string strGuess);
 };
 
