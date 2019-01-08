@@ -9,13 +9,32 @@ public:
 	}
 
 
+	Array & operator=(const Array & obj) {
+		if (m_length != obj.GetLength())
+		{
+			delete m_arInt;
+			m_arInt = new int[m_length];
+		}
+		copy(obj);
+
+		return *this;
+	}
+
+
 	Array(const Array & obj) {
+		m_length = obj.GetLength();
+		m_arInt = new int[m_length];
+		copy(obj);
+	}
+
+
+	/*Array(const Array & obj) {
 		m_length = obj.GetLength();
 		m_arInt = new T[m_length];
 		for (size_t i = 0; i < m_length; i++) {
 			m_arInt[i] = obj.Get(i);
 		}
-	}
+	}*/
 
 	void Set(size_t index, T nVal) {
 		m_arInt[index] = nVal;
@@ -37,5 +56,12 @@ public:
 private:
 	size_t m_length;
 	T * m_arInt;
+
+	void copy(const Array & obj) {
+		for (size_t i = 0; i < m_length; i++) {
+			m_arInt[i] = obj.Get(i);
+		}
+	}
+
 };
 
