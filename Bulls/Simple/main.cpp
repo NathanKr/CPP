@@ -9,7 +9,7 @@
 #include "BullCowGame.h"
 
 using namespace std;
-constexpr int MAX_GUESS_NUMBER = 10;
+constexpr int MAX_GUESS_NUMBER = 15;
 constexpr int WORD_LENGTH = 4;
 
 BullCowGame bcGame(MAX_GUESS_NUMBER , WORD_LENGTH);
