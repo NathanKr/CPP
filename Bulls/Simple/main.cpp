@@ -9,8 +9,8 @@
 #include "BullCowGame.h"
 
 using namespace std;
-constexpr int MAX_GUESS_NUMBER = 2;
-constexpr int WORD_LENGTH = 5;
+constexpr int MAX_GUESS_NUMBER = 15;
+constexpr int WORD_LENGTH = 4;
 
 BullCowGame bcGame(MAX_GUESS_NUMBER , WORD_LENGTH);
 
@@ -25,6 +25,7 @@ void PrintIntro() {
 
 	cout << "Welcome to Bulls and Cows , a fun word game" << endl << endl;
 	cout << "can you guess the " << WORD_LENGTH << " letters word i think about ?" << endl;
+	cout << "you have " << MAX_GUESS_NUMBER << " tries" << endl;
 }
 
 void PrintNonValidGuessError(GuessStatus status) {

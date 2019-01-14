@@ -1,5 +1,7 @@
 #include "BullCowGame.h"
 #include <string>
+#include <stdlib.h>     /* srand, rand */
+#include <time.h>       /* time */
 
 
 void BullCowGame::Reset()
@@ -114,13 +116,29 @@ BullCowGame::BullCowGame(int nMaxTries ,  int nWorldLength) : m_strHiddenWord(nW
 	clear();
 }
 
+bool BullCowGame::doesExist(char c, std::string strGuess) {
+	return strGuess.find(c) != std::string::npos;
+}
+
+
+
 void BullCowGame::clear()
 {
-	// TODO make values random 
+	srand((unsigned int)time(NULL));
+
+	int nNumLetters = 'z' - 'a' + 1, nSecret ;
+	char cSecret;
+
 	for (size_t i = 0; i < m_strHiddenWord.length(); i++)
 	{
-		m_strHiddenWord[i] = (char)('a' + i);// casting is done to remove compiler warning
-	}
+		do {
+			nSecret = rand() % nNumLetters;
+			cSecret = (char)('a' + nSecret);
+		} while (doesExist(cSecret, m_strHiddenWord));
+		m_strHiddenWord[i] = cSecret;
+	} 
+
+
 	m_nCurrentTry = 0; // --- it is incremented in SubmitGuess
 	m_bGameWon = false;
 }
