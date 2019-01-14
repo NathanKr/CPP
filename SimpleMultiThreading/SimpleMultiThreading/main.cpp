@@ -3,8 +3,8 @@
 
 using namespace std;
 
-void thread_func() {
-	for (size_t i = 0; i < 100; i++)
+void thread_func(int length) {
+	for (size_t i = 0; i < length; i++)
 	{
 		cout << "Thread func . thread id  : " << this_thread::get_id() << " index : " << i << endl;
 	}
@@ -12,7 +12,7 @@ void thread_func() {
 
 int main() {
 
-	thread t1(thread_func);// --- start immidiately
+	thread t1(thread_func,200);// --- start immidiately
 
 	for (size_t i = 0; i < 100; i++)
 	{
